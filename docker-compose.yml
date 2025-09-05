@@ -1,0 +1,16 @@
+services:
+  service1:
+    build:
+      context: ./service1        # Build service1 from its Dockerfile
+    ports:
+      - "8001:8001"              # Map host port 8001 to container port 8001
+    volumes:
+      - ./service1/src:/var/www/html  # Mount local src directory into container
+
+  service2:
+    build:
+      context: ./service2        # Build service2 from its Dockerfile
+    ports:
+      - "8002:8002"              # Map host port 8002 to container port 8002
+    volumes:
+      - ./service2/src:/var/www/html  # Mount local src directory into
